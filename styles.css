@@ -1,0 +1,143 @@
+/* Reset default styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+h1 {
+  font-size: 2em;
+  color: #4b79a1;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-container input {
+  width: 70%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-size: 1em;
+}
+
+.input-container input:focus {
+  border-color: #4b79a1;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(75, 121, 161, 0.3);
+}
+
+.input-container button {
+  padding: 12px 20px;
+  cursor: pointer;
+  background-color: #4b79a1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.input-container button:hover {
+  background-color: #3b6991;
+  transform: scale(1.05);
+}
+
+/* Movie Card */
+.movie-card {
+  display: none;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  animation: slideIn 0.8s ease forwards;
+  width: 100%;
+}
+
+/* Movie Details Styling */
+.movie-card h2 {
+  font-size: 1.4em;
+  color: #4b79a1;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.movie-card img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card p {
+  margin: 8px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.movie-card p strong {
+  color: #4b79a1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
